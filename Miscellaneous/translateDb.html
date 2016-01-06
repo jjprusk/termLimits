@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Translate Legislator Database</title>
+<script src="legislators-current.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+<script>
+var states = new Object();
+states["AK"] = {name:"Alaska", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["AL"] = {name:"Alabama", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["AS"] = {name:"American Samoa", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["AZ"] = {name:"Arizona", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["AR"] = {name:"Arkansas", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["CA"] = {name:"California", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["CO"] = {name:"Colorado", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["CT"] = {name:"Connecticut", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["DE"] = {name:"Delaware", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["DC"] = {name:"District of Columbia", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+//states["FM"] = {name:"Federated States of Micronesia", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["FL"] = {name:"Florida", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["GA"] = {name:"Georgia", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["GU"] = {name:"Guam", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["HI"] = {name:"Hawaii", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["ID"] = {name:"Idaho", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["IL"] = {name:"Illinois", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["IN"] = {name:"Indiana", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["IA"] = {name:"Iowa", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["KS"] = {name:"Kansas", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["KY"] = {name:"Kentucky", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["LA"] = {name:"Louisiana", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["ME"] = {name:"Maine", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+//states["MH"] = {name:"Marshall Islands", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MD"] = {name:"Maryland", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MA"] = {name:"Massachusetts", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MI"] = {name:"Michigan", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MN"] = {name:"Minnesota", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MS"] = {name:"Mississippi", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MO"] = {name:"Missouri", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MT"] = {name:"Montana", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["NE"] = {name:"Nebraska", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["NV"] = {name:"Nevada", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["NH"] = {name:"New Hampshire", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["NJ"] = {name:"New Jersey", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["NM"] = {name:"New Mexico", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["NY"] = {name:"New York", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["NC"] = {name:"North Carolina", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["ND"] = {name:"North Dakota", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["MP"] = {name:"Northern Mariana Islands", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["OH"] = {name:"Ohio", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["OK"] = {name:"Oklahoma", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["OR"] = {name:"Oregon", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+//states["PW"] = {name:"Palau", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["PA"] = {name:"Pennsylvania", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["PR"] = {name:"Puerto Rico", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["RI"] = {name:"Rhode Island", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["SC"] = {name:"South Carolina", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["SD"] = {name:"South Dakota", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["TN"] = {name:"Tennessee", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["TX"] = {name:"Texas", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["UT"] = {name:"Utah", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["VT"] = {name:"Vermont", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["VI"] = {name:"Virgin Islands", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["VA"] = {name:"Virginia", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["WA"] = {name:"Washington", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["WV"] = {name:"West Virginia", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["WI"] = {name:"Wisconsin", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+states["WY"] = {name:"Wyoming", legislators: new Array(), nSen: 0, nRep: 0, nAllowedDays: 0, nOverDays: 0};
+/*
+ * This script reads-in the entire current legislator database and writes out a compact  json file which
+ * only includes the required fields.
+ *
+ * Record format:
+ *		state
+ *			index : key, two letter abbreviation
+ *			name : full state name
+ *			legislators : array of legislators
+ *				nameFull : official full name
+ *				nameFirst : first name
+ *				type : current chamber ("sen" or "rep")
+ *				ballotpedia : ballotpedia id
+ *				bioguide : bioguide id
+ *				votesmart : votesmart id
+ *				dateStart : starting date of first term (not necessarily contiguous)
+ *				nDays : number of days in office (does not include gaps)
+ *			nSen : number of senators
+ *			nRep : number of representatives
+ *			nAllowedDays : calculated from current term limit setting
+ *			nOverDays : calculated from current term limit setting
+ * 
+ */
+	var oneDay = 24*60*60*1000
+	for(var i = 0; i < reps.length; i++) {
+		var state = reps[i].terms[reps[i].terms.length-1].state;
+		var nDays = 0;
+		for(var j = 0; j < reps[i].terms.length; j++) {
+			nDays += Math.round(Math.abs((new Date(reps[i].terms[j].end).getTime() - 
+			new Date(reps[i].terms[j].start).getTime())/(oneDay)));
+		}
+		var leg = {
+			"nameFull" : reps[i].name.official_full,
+			"nameFirst" : reps[i].name.first,
+			"type" : reps[i].terms[reps[i].terms.length-1].type,
+			"ballotpedia" : reps[i].id.ballotpedia,
+			"bioguide" : reps[i].id.bioguide,
+			"votesmart" : reps[i].id.votesmart,
+			"dateStart": reps[i].terms[0].start,
+			"nDays" : nDays,
+		};
+		if (leg.type === "sen") {
+			states[state].nSen++;
+		} else {
+			states[state].nRep++;
+		}
+		states[state].legislators.push(leg);
+	}
+	document.write("var states= " + (JSON.stringify(states))+';');
+</script>
+</body>
+</html>

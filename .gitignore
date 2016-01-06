@@ -1,0 +1,6 @@
+node_modules
+.DS_Store
+.idea
+validation-report.json
+validation-status.json
+w3cErrors/**

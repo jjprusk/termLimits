@@ -1,0 +1,415 @@
+/*****************************************************************
+ * Developed by Joe Pruskowski for an ASU graduate project on the
+ * impact of data visualization. Copyright 2015-2016 all rights
+ * reserved.
+ *****************************************************************/
+
+/*****************************************************************
+ * Miscellaneous styling.
+ ****************************************************************/
+.noFloat {
+	clear: both;
+}
+.noShow {
+	display: none;
+}
+.limitExceeded {
+	color: red;
+}
+.over-limit {
+	background-color: #fdf2f2;
+}
+.under-limit {
+	background-color: #f4fff3;
+}
+.fullWidth {
+	width: 100%;
+}
+.halfWidth {
+	width: 49%;
+	float: left;
+}
+h1, h2, h3 {
+	color: #007cb6;
+	font-family: arial;
+}
+h1,h2,h3 {
+	text-align: left;
+}
+img {
+	border: 0px;
+}
+html {
+	background-image: url('../images/1200px-Capitol1846.png');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+body {
+	margin: 0;
+}
+header {
+	border-bottom: solid 1px #ddd;
+	border-top: solid 4px #c50302;
+	padding: .25em .5em 0;
+	background-image: url("../images/flag.png");
+	background-size: cover;
+}
+header div div.header-left {
+	float: left;
+}
+header div div.header-right {
+	float: right;
+	margin-right: .5em;
+}
+header div div.header-left img {
+	height: 50px;
+}
+header div div.header-left a#icon {
+	display: none;
+}
+nav {
+	display: inline;
+}
+nav ul {
+	padding: 0;
+	list-style-type: none;
+}
+nav ul li {
+	padding: 0 .5em;
+	display: inline;
+}
+nav ul li a {
+	text-transform: uppercase;
+	text-decoration: none;
+}
+nav ul li a:link, nav ul li a:visited {
+	color: black;
+}
+nav img {
+	vertical-align: middle;
+	height: 19px;
+}
+nav ul li a:hover { 
+	border-bottom: solid 4px #c50302;
+}
+div#outer {
+	padding: 0 .5em;
+}
+section#main, aside {
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+section#main {
+	padding: 0 .5%;
+	margin-bottom: 1em;
+	background-color: #f1f1f1;
+}
+section#main fieldset {
+	margin: 0;
+	border: solid 1px black;
+	padding: 10px 0 5px 10px;
+}
+aside {
+	width: 49%;
+	float: right;
+	background-color: #f1f1f1;
+}
+footer {
+	border-top: inset 2px #ccc;
+	margin-top: 1em;
+	padding: 1em;
+}
+footer p {
+	text-align: center;
+	margin: 0;
+}
+p.note {
+	font-size: .75em;
+	margin:0;
+}
+li img, img.help {
+	vertical-align: middle;
+	height: .9em;
+	margin-bottom: 2px;
+}
+table#mainTable {
+	margin-top: .5em;
+}
+/*
+ Styling for front page.
+ */
+div.viewSelect {
+	width: 31%;
+	padding: 0 1%;
+	float: left;
+}
+div.viewSelect h3 {
+	text-align: center !important;
+}
+div.viewSelect img {
+	width: 100%;
+}
+section.fullWidth h2 {
+	text-align: center;
+}
+/*
+ * Styling for the help files.
+ */
+img.help {
+	cursor: pointer;		
+}
+div#help {
+	padding-bottom: 0;
+}
+div#help ul {
+	margin: 0;
+}
+div#help ul li {
+	line-height: 1.75em;
+}
+ .ui-dialog-buttonpane {
+	padding: 0 0.4em 0 0 !important;
+}
+/*
+ * Styling for the slider.
+ */
+div#limitSlider {
+	width: 49%;
+	float:left;
+}
+div#limitAmount {
+	width: 48%;
+	margin-left: 2%;
+	float: left;
+}
+div#mobile-menu-icon {
+	padding: 3px;
+	width: 40px;
+	background: #5f5f5f;
+	border-radius: 5px;
+	border: 2px inset black;
+	margin-top: 7px;
+	display: none;
+}
+div#mobile-menu-icon hr {
+	height: 2px;
+	background-color: white;
+	border: none;
+}
+div#mobile-menu-icon hr:nth-child(1) {
+	margin: 0 0 10px 0;
+}
+div#mobile-menu-icon hr:nth-child(2) {
+	margin: 10px 0;
+}
+div#mobile-menu-icon hr:nth-child(3) {
+	margin: 0 0 0px 0;
+}
+/************************
+ * Table styling.
+ ************************/
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table td, th {
+	text-align: center;
+}
+table thead {
+	background-color: #eeeeee;
+}
+table thead > tr:first-child > th:first-child {
+	font-size: x-large;
+}
+table thead > tr:nth-child(2) > th {
+	font-size: large;
+}
+table th.header-state {
+	padding: .5em 0;
+}
+table tfoot td {
+	font-size: .75em;
+	text-align: left;
+}
+table td.header-state {
+	font-size: 1.3em;
+	line-height: 1.3em;
+}
+/************************
+ * Map styling.
+ ************************/
+div#mapWrapper {
+	position: relative;
+}
+div#mapWrapper div:first-child {
+	position: absolute;
+	padding: 1px;
+	z-index: 25;
+	top: 0;
+	left: 0;
+	display: none;
+} 
+/************************
+ * Person info card styling.
+ ************************/
+.person hr {
+	margin: 0 0 .25em 0;
+}
+.person div.personName {
+	text-align: center;
+	padding: .5em 0;
+	font-weight: bold;
+	font-size: 2em;
+	max-width: 11em;
+	margin: 0 auto;
+}
+.person div {
+	margin: .5em;
+}
+.person div.personBallotpedia img,
+.person div.personBioguide img,
+.person div.personVotesmart img {
+	height: 1em;
+	margin-left: 5px;
+}
+.person div.personFact {
+	margin-top: 1em;
+}
+.person div.personFact img {
+	width: 15%;
+}
+.person div.personFact p {
+	width: 80%;
+	float: right;
+}
+/*******************
+*********************/
+
+.tableWrapper {
+	position: relative;
+}
+tbody, thead {
+	display: block;
+}
+tbody, thead {
+	position: absolute;
+}
+tbody {
+	overflow: auto;
+	border-bottom: solid 1px black;
+	border-top: solid 1px black;
+	max-height: 300px;
+}
+tbody td {
+	border: solid 1px black;
+}
+tbody tr:first-child td{
+	border-top: none;
+}
+.tableWrapper tbody tr:last-of-type td {
+	border-bottom: none;
+}
+thead {
+	border: solid 1px black;
+}
+canvas#chart {
+	max-width: 100%;
+}
+@media (max-width: 800px) {
+header div div.header-left, header div div.header-right {
+}
+section#main, aside {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+nav ul {
+	margin: 0;
+}
+nav ul li {
+	display: list-item;
+	padding: .5em 0;
+}
+nav ul li a:visited {
+	color: black !important;
+}
+nav {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 175px;
+	background-color: #e8e8e8;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+	text-align: center;
+	display: none;
+	padding: .75em 0;
+	z-index: 50;
+}
+section#main, aside {
+	width: 100% !important;
+	float: none !important;
+}
+div#mobile-menu-icon {
+	display: inline-block;
+}
+.person {
+	width: 70%;
+}
+}
+
+@media (max-width: 375px) {
+html {
+	background-image: none;
+}
+header div div.header-left a#icon {
+	display: block;
+}
+header div div.header-left a#icon img {
+	height: 35px;
+}
+header div div.header-left a#logo {
+	display: none;
+}
+div#mobile-menu-icon {
+	width: 30px;
+	padding: 2px;
+	margin-top: 5px;
+}
+div#mobile-menu-icon hr:nth-child(1) {
+	margin: 0 0 8px 0;
+}
+div#mobile-menu-icon hr:nth-child(2) {
+	margin: 8px 0;
+}
+h1 {
+	font-size: 1.25em;
+	margin: .25em 0;
+	text-align: center;
+}
+h2, h3 {
+	font-size: 1.1em;
+}
+section#main div.select div.section-left, section#main div.select div.section-right {
+	float: none !important;
+	width: 100% !important;
+}
+div#mapWrapper div:first-child {
+	display: block;
+}
+.person {
+	width: 90%;
+}
+.person div.personName {
+	font-size: 1.5em;
+}
+div.viewSelect {
+	width: 100%;
+	float: none;
+	padding: 0;
+}
+div#viewSupplemental {
+	display: none;
+}
+}
