@@ -1,7 +1,9 @@
 module.exports = function(grunt) {
 /*
  * grunt bump-only:minor
- - add GIT
+ * git push origin master
+ * git pull origin master
+ * git commit -m "v0.0.1-1"
  */
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
