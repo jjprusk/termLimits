@@ -1,4 +1,5 @@
 node_modules
+tbuild*/**
 .DS_Store
 .idea
 validation-report.json
