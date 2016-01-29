@@ -243,6 +243,10 @@ table td.header-state {
 div#mapWrapper {
 	position: relative;
 }
+h3.shadingInfo {
+	margin: .25em 0 0 0;
+	text-align: center;
+}
 div#mapWrapper div:first-child {
 	position: absolute;
 	padding: 1px;
