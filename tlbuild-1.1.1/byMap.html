@@ -11,10 +11,7 @@
 	<script src="jquery-ui-1.11.4.redmond/jquery-ui.min.js"></script>
 	<script src="us-map-1.0.1/lib/raphael.min.js"></script>
 	<script src="us-map-1.0.1/jquery.usmap.js"></script>
-	<!-- build:js js/common.min.js -->
-	<script src="js/states.json"></script>
-	<script src="js/common.js"></script>
-	<!-- /build -->
+	<script src="js/common.min.js"></script>
 </head>
 <body>
 	<header>
@@ -49,20 +46,19 @@
 		<div class="noFloat"></div>
 	</header>
 	<div id="outer">
-	<h1>How states match your limit</h1>
+	<h1>How states align with your limit</h1>
 	<section id="main" class="halfWidth">
 		<h2 class="noShow">Term limit map</h2>
 		<fieldset>
 			<div id="limitSlider"></div>
 			<div id="limitSelector">&nbsp;&nbsp;Limit:&nbsp;<select></select></div>
 			<div class="noFloat"></div>
-			<div id="sliderInfo">Slide or use the drop down menu to pick a new term limit to see what happens.</div>
  		</fieldset>
 		<div id="mapWrapper">
     		<div></div>
-			<p class="mapInformation">Lighter states are more closely matched to the selected term limit. Darker states are less closely matched to the selected term limit.</p>
+    		<h3 class="shadingInfo">Darker states less aligned</h3>
 			<div id="vmap" data-view-type="map" style="width: 500px; height: 500px"></div>
-    		<p class="note">* Click on state for details</p>
+    		<p class="note">* Move slider to change limit; click on state for details</p>
     	</div>
 	</section>
 	<aside id="table" class="fadeout tableWrapper">
@@ -71,9 +67,6 @@
 			<thead>
 				<tr>
 					<th colspan="3">Information by state</th>
-				</tr>
-				<tr>
-					<th colspan="3" class="tableInstructions">Click on name for more details (red indicates over limit).</th>
 				</tr>
 				<tr>
 					<th>Legislator</th>

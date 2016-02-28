@@ -17,16 +17,10 @@
 	color: red;
 }
 .over-limit {
-	color: red;
-	font-weight: bold;
-	/**background-color: #fdf2f2;**/
-	/**background-color: #ff9999;**/
-}
-.over-limit a {
-	color : red;
+	background-color: #fdf2f2;
 }
 .under-limit {
-	/**background-color: #f4fff3;**/
+	background-color: #f4fff3;
 }
 .fullWidth {
 	width: 100%;
@@ -41,10 +35,6 @@ h1, h2, h3 {
 }
 h1,h2,h3 {
 	text-align: left;
-}
-p.BossEmphasis {
-	font-weight: bold;
-	font-size: 1.25em;
 }
 img {
 	border: 0px;
@@ -120,11 +110,6 @@ section#main fieldset {
 	margin: 0;
 	border: solid 1px black;
 	padding: 10px 0 5px 10px;
-}
-div#sliderInfo {
-	font-size: .75em;
-	padding-top: 5px;
-	font-style: italic;
 }
 aside {
 	width: 49%;
@@ -252,11 +237,6 @@ table td.header-state {
 	font-size: 1.3em;
 	line-height: 1.3em;
 }
-.tableInstructions {
-	font-weight: normal;
-	font-size: .75em !important;
-	font-style: italic;
-}
 /************************
  * Map styling.
  ************************/
@@ -274,12 +254,7 @@ div#mapWrapper div:first-child {
 	top: 0;
 	left: 0;
 	display: none;
-}
-.mapInformation {
-	font-style: italic;
-	text-align: center;
-	margin-top: 5px;
-}
+} 
 /************************
  * Person info card styling.
  ************************/

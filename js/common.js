@@ -787,6 +787,7 @@ _tl.InfoCard = (function() {
 			/*
 			 * Include Ballotpedia if available.
 			 */
+			'<div class="personDate">Completing background and voting record available by clicking on the following links:</div>' +
 			'<div class="personBallotpedia">' +
 			((person.ballotpedia) ? 
 				'<a href="http://ballotpedia.org/' + person.ballotpedia +
