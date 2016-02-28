@@ -1,5 +1,5 @@
 node_modules
-tbuild*/**
+tlbuild*/**
 .DS_Store
 .idea/**
 validation-report.json
